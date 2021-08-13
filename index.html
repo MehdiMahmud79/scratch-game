@@ -47,5 +47,21 @@
 </ul>
 </div>
 <iframe src="https://scratch.mit.edu/projects/535299135/embed" allowtransparency="true" width="750" height="550" frameborder="0" scrolling="no" allowfullscreen></iframe>
-</body>
+
+    <button id="greenFlag">Green Flag</button>
+    <div id="project"></div>
+
+    <script type="module">
+      import project from "./index.js";
+
+      project.attach("#project");
+
+      document.querySelector("#greenFlag").addEventListener("click", () => {
+        project.greenFlag();
+      });
+
+      // Autoplay
+      project.greenFlag();
+    </script>
+ </body>
 </html>
